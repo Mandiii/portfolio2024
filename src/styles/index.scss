@@ -1,0 +1,18 @@
+// utilities
+@import url(./utilities/_mixins.scss);
+@import url(./utilities/_variables.scss);
+
+// components
+@import url(./componentStyles/_button.scss);
+@import url(./componentStyles/_header.scss);
+@import url(./componentStyles/aboutComponentsStyles/_specialty.scss);
+@import url(./componentStyles/aboutComponentsStyles/_spokenLanguage.scss);
+@import url(./componentStyles/aboutComponentsStyles/_studiesTimeline.scss);
+
+// pages
+@import url(./pageStyles/_about.scss);
+@import url(./pageStyles/_errorPage.scss);
+@import url(./pageStyles/_home.scss);
+@import url(./pageStyles/_portfolio.scss);
+@import url(./pageStyles/_project.scss);
+@import url(./pageStyles/_themeSelect.scss);
