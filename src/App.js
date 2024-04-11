@@ -1,3 +1,4 @@
+import './styles/index.scss';
 import Header from './components/Header.js'
 import Home from './pages/Home.js'
 import About from './pages/About.js'

@@ -1,18 +1,20 @@
+@import "./app.scss";
 // utilities
-@import url(./utilities/_mixins.scss);
-@import url(./utilities/_variables.scss);
+@import "./utilities/_mixins.scss";
+@import "./utilities/_variables.scss";
+@import "./utilities/_typography.scss";
 
 // components
-@import url(./componentStyles/_button.scss);
-@import url(./componentStyles/_header.scss);
-@import url(./componentStyles/aboutComponentsStyles/_specialty.scss);
-@import url(./componentStyles/aboutComponentsStyles/_spokenLanguage.scss);
-@import url(./componentStyles/aboutComponentsStyles/_studiesTimeline.scss);
+@import "./componentStyles/_button.scss";
+@import "./componentStyles/_header.scss";
+@import "./componentStyles/aboutComponentsStyles/_specialty.scss";
+@import "./componentStyles/aboutComponentsStyles/_spokenLanguage.scss";
+@import "./componentStyles/aboutComponentsStyles/_studiesTimeline.scss";
 
 // pages
-@import url(./pageStyles/_about.scss);
-@import url(./pageStyles/_errorPage.scss);
-@import url(./pageStyles/_home.scss);
-@import url(./pageStyles/_portfolio.scss);
-@import url(./pageStyles/_project.scss);
-@import url(./pageStyles/_themeSelect.scss);
+@import "./pageStyles/_about.scss";
+@import "./pageStyles/_errorPage.scss";
+@import "./pageStyles/_home.scss";
+@import "./pageStyles/_portfolio.scss";
+@import "./pageStyles/_project.scss";
+@import "./pageStyles/_themeSelect.scss";

@@ -1,0 +1,39 @@
+body {
+    font-family: 'Lato', sans-serif;
+    color: $black;
+    p {
+        line-height: 2;
+    }
+    a {
+        text-decoration: none;
+    }
+} 
+main.elegant {
+    h2,h2 {
+        color: $black;
+        font-family: 'Baskerville';
+        font-weight: 100;
+        margin-top: 0;
+        display: inline-block;
+        &::after {
+            content: '';
+            border-top: solid 4px #C9C5AE;
+            display: block;
+            width: 70%;
+            margin-top: 30px;
+        }   
+    }
+    h1 {
+        font-size: 65px;
+    }
+    h2 {
+        font-size: 50px;
+    }
+    .pre-title {
+        color: $light-grey;
+        font-size: 22px;
+        font-weight: 300;
+        font-family: 'Lato', sans-serif; 
+    }
+
+}

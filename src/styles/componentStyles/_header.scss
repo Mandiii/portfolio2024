@@ -1,0 +1,58 @@
+// $golden: #C9C5AE;
+// $goldenBg: #FFFEF8;
+// $light-grey: #AEBBB9;
+// $black: #2D2D2D;
+header {
+    text-align: center;
+    #logo {
+        width: 85px;
+    }
+    .themes-btn {
+        position: absolute;
+        right: 20px;
+        .menu-squares {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            width: 35px;
+            margin: auto;
+            span {
+                width: 15px;
+                height: 15px;
+                display: block;
+                background-color: $golden;
+                border-radius: 3px;
+            }
+        }
+        p {
+            margin: 0;
+            color: $black;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+    }
+}
+header.elegant {
+    .nav-text-links {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: fixed;
+        right: 5px;
+        bottom: 50%;
+        gap: 20px;
+        a {
+            color: $golden;
+            &::before {
+                content: '';
+                display: block;
+                width: 30px;
+                border-top: 3px solid $black;
+                position: relative;
+                right: 0;
+            }
+        }
+    }
+    
+}
