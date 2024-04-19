@@ -10,15 +10,24 @@ main.elegant {
         margin-left: 23.5%;
     }
     .project-slider {
-        width: 80%;
+        width: 100%;
         display: flex;
         background-color: $golden;
         margin: auto;
+        padding: 40px 10%;
+        position: relative;
         img {
             width: 40%;
         }
         button.slider-navigate {
             position: absolute;
+            bottom: 50%;
+            &.prev {
+                left: 0;
+            }
+            &.next {
+                right: 0;
+            }
         }
     }
 }
