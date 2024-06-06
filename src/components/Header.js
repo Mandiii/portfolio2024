@@ -1,15 +1,15 @@
-import Logo from '../assets/logo.svg'
+import Logo from '../images/logo.svg'
 import { Link, NavLink } from 'react-router-dom'
 
 function Header() {
     return(
-        <header className='elegant'>
+        <header className='snow'>
             <nav>
                 <Link to='/'><img src={Logo} id='logo' alt="Mandi Gansauge" /></Link>
                 <div className='nav-text-links'>
-                    <NavLink to='/'>Home</NavLink>
-                    <NavLink to='/about'>About Me</NavLink>
-                    <NavLink to='/portfolio'>Full Portfolio</NavLink>
+                    <NavLink to='/' className={({ isActive }) => (isActive ? "active" : "nav-element")}>Home</NavLink>
+                    <NavLink to='/about' className={({ isActive }) => (isActive ? "active" : "nav-element")}>About Me</NavLink>
+                    <NavLink to='/portfolio' className={({ isActive }) => (isActive ? "active" : "nav-element")}>Full Portfolio</NavLink>
                 </div>
                 <Link to='/theme' className='themes-btn'>
                     <div className="menu-squares">

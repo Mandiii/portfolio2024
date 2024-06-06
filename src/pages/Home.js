@@ -1,7 +1,31 @@
-import BannerImg from '../assets/placeholderimg.png'
+import BannerImg from '../images/placeholderimg.png'
 import ProjectsSlider from '../components/ProjectsSlider'
 import Specialty from '../components/aboutComponents/Specialty'
+import Button from '../components/Button'
 function Home() {
+    const projects = [
+        {
+            id: "project-name1",
+            title: "Project title 1",
+            type: "Design",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",            
+            img: ""
+        },
+        {
+            id: "project-name2",
+            title: "Project title 2",
+            type: "Design",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",            
+            img: ""
+        },
+        {
+            id: "project-name3",
+            title: "Project title 3",
+            type: "Design",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",
+            img: ""
+        }
+    ]
     const specialties = [
         {
             id:0,
@@ -41,8 +65,20 @@ function Home() {
             />
         )
     })
+    const projectsPreview = projects.map(project => {
+        return(
+            <div className='project-preview' key={project.id}>
+                <div className='text-part'>
+                    <h3 className="title">{project.title}</h3>
+                    <p className="description">{project.description}</p>
+                    <button>More about this project</button>
+                </div>
+                <img src={BannerImg} alt="" />
+            </div>
+        )
+    })
     return (
-        <main className='elegant'>
+        <main className='snow'>
             <div className="elegant-deco-grid">
                 <div></div>
                 <div></div>
@@ -58,10 +94,24 @@ function Home() {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.</p>
                 </div>
-                <img src={BannerImg} alt="" />
+                {/* <img src={BannerImg} alt="" /> */}
             </div>
-            {specialtiesList}
-            <ProjectsSlider />
+
+            <div className="specialties">
+                <div className='specialties-container'>
+                    {specialtiesList}
+                </div>
+                <Button 
+                    btnText="About Me"
+                />
+            </div>
+            
+            
+            {/* <ProjectsSlider /> */}
+            <section id='projects'>
+                <h2>Some of my projects </h2>
+                {projectsPreview}
+            </section>
         </main>
     )
     

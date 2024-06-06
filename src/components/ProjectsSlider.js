@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import BannerImg from '../assets/placeholderimg.png'
+import BannerImg from '../images/placeholderimg.png'
 import { Link } from 'react-router-dom'
 function ProjectsSlider() {
     const projects = [
@@ -51,8 +51,7 @@ function ProjectsSlider() {
 
             <img src={BannerImg} alt="" />
             <div className="sliderInfo">
-                <p className="project-type pre-title">{sliderProject.type}</p>
-                <h2 className="project-title">{sliderProject.title}</h2>
+                <h2 className="project-title"><span className='project-type pre-title'>{sliderProject.type}</span> <br/>{sliderProject.title}</h2>
                 <p className="project-description">{sliderProject.description}</p>
                 <Link to={"/project/" + sliderProject.id}>View full project</Link>
             </div>

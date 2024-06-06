@@ -1,0 +1,5 @@
+@mixin pinkgradient-border {
+    border-image: linear-gradient(#f6b73c, #4d9f0c) 30;;
+    border-width: 5px;
+    border-style: solid;
+}

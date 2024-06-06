@@ -1,0 +1,61 @@
+.titleBanner {
+    display: flex;
+    align-items: center;
+    img {
+        width: 50%;
+        height: 100%;
+    }
+    .text-part {
+        background-color: $bg-grey;
+        padding: 50px;
+        padding-left: 10%;
+        .pre-title {
+            color: $black;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+        h1 {
+            font-size: 50px;
+            margin-top: 0;
+        }
+        .description {
+            font-size: 16px;
+        }
+        .tags {
+            display: flex;
+            gap: 15px;
+            span {
+                color: #fff;
+                background-color: $black;
+                padding: 5px;
+            }
+        }
+        .infos {
+            display: flex;
+            gap: 30px;
+        }
+    }
+}
+.project section {
+    padding: 50px 10%;
+    h2 {
+        font-size: 45px;
+    }
+}
+.image-row {
+    display: flex;
+    justify-content: space-around;
+    img {
+        width: 15%;
+    }
+}
+section.side-img {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background-color: $bg-grey;
+    img {
+        width: 30%;
+    }
+}

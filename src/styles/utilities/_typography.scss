@@ -9,7 +9,7 @@ body {
     }
 } 
 main.elegant {
-    h2,h2 {
+    h2,h2,h3.large-title {
         color: $black;
         font-family: 'Baskerville';
         font-weight: 100;
@@ -35,5 +35,26 @@ main.elegant {
         font-weight: 300;
         font-family: 'Lato', sans-serif; 
     }
+    h3 {
+        color: $light-grey;
+        font-weight: 400;
+    }
 
+}
+main.snow {
+    h1,h2 {
+        font-family: 'Lust';
+        margin: 0;
+        text-align: center;
+    }
+    h1 {
+        font-size: 100px;
+        color: $purple;
+    }
+    .pre-title {
+        color: $purple;
+        font-size: 20px;
+        font-weight: 100;
+        font-family: 'Lato', sans-serif;
+    }
 }

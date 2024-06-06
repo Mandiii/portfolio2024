@@ -1,15 +1,18 @@
-// $golden: #C9C5AE;
-// $goldenBg: #FFFEF8;
-// $light-grey: #AEBBB9;
-// $black: #2D2D2D;
+.elegant-deco-grid {
+    display: none;
+}
 header {
     text-align: center;
+    padding: 15px 5%;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
     #logo {
         width: 85px;
     }
     .themes-btn {
-        position: absolute;
-        right: 20px;
         .menu-squares {
             display: flex;
             flex-wrap: wrap;
@@ -17,16 +20,14 @@ header {
             width: 35px;
             margin: auto;
             span {
-                width: 15px;
-                height: 15px;
+                width: 13px;
+                height: 13px;
                 display: block;
-                background-color: $golden;
                 border-radius: 3px;
             }
         }
         p {
             margin: 0;
-            color: $black;
             font-size: 14px;
             font-weight: 600;
         }
@@ -34,6 +35,14 @@ header {
     }
 }
 header.elegant {
+    .themes-btn {
+        p {
+            color: $black;
+        }
+        .menu-squares span {
+            background-color: $golden;
+        }
+    } 
     .nav-text-links {
         display: flex;
         flex-direction: column;
@@ -53,6 +62,46 @@ header.elegant {
                 right: 0;
             }
         }
-    }
-    
+    }  
+}
+header.snow {
+    display: flex;
+    justify-content: space-between;
+    background-color: $purple;
+    .themes-btn {
+        p {
+            color: $pinkwhite;
+        }
+        .menu-squares span {
+            background: $pinkgradient;
+        }
+    } 
+    .nav-text-links {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        a {
+            color: $pinkwhite;
+            display: flex;
+            align-items: center;
+            flex-direction: column;            
+            text-align: center;
+            font-size: 14px;
+            &::before {
+                content: '';
+                display: block;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                border: 2px solid $pinkwhite;
+                margin-bottom: 10px;
+            }
+            &.active::before {
+                background: $pinkgradient;
+                border: none;
+                width: 19px;
+                height: 19px;
+            }
+        }
+    }  
 }

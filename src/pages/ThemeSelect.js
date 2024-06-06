@@ -1,7 +1,9 @@
 function ThemeSelect() {
+
     return (
         <main>
-        <p>test</p>
+        {/* <button onClick={}>Elegant</button>
+        <button onClick={}>Snow</button> */}
     </main>
     )
     
