@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import placeholderImg from '../images/banner-illustration-snow.png'
+import filterDesign from '../images/icons/filter-design.png'
+import filterDev from '../images/icons/filter-dev.png'
+import filterMotion from '../images/icons/filter-motion.png'
 
 function Portfolio() {
     const projects = [
@@ -58,15 +61,24 @@ function Portfolio() {
         )
     })
     return (
-        <main>
+        <main id='portfolio'>
             <h1>Portfolio</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.</p>
 
             <section>
                 <div className="filters">
-                <button className="filterBtn" onClick={() => setSortType("design")}>Graphic Design</button>
-                <button className="filterBtn" onClick={() => setSortType("motion")}>Motion Design</button>
-                <button className="filterBtn" onClick={() => setSortType("Front end")}>Front end</button>
+                <button className="filterBtn" onClick={() => setSortType("design")}>
+                    <img src={filterDesign} alt="" />
+                    <p>Graphic Design</p>
+                </button>
+                <button className="filterBtn" onClick={() => setSortType("motion")}>
+                    <img src={filterMotion} alt="" />
+                    <p>Motion Design</p>
+                </button>
+                <button className="filterBtn" onClick={() => setSortType("Front end")}>
+                    <img src={filterDev} alt="" />
+                    <p>Front end</p>
+                </button>
             </div>
 
             <div className="tags">
@@ -88,9 +100,9 @@ function Portfolio() {
                 </div>
             </div>
             </section>
-                {renderedProjects}
-            <section>
                 
+            <section id='projects-container'>
+                {renderedProjects}
             </section>
         </main>
     )

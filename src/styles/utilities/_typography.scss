@@ -46,9 +46,15 @@ main.snow {
         font-family: 'Lust';
         margin: 0;
         text-align: center;
+        color: $purple;
     }
     h1 {
         font-size: 100px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    h3 {
         color: $purple;
     }
     .pre-title {

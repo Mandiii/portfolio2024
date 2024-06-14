@@ -29,6 +29,7 @@ main.elegant {
 main.snow {
     .specialties {
         background-color: $purple;
+        padding-bottom: 1px;
     }
     div.specialties-container {        
         color: $pinkwhite;
@@ -42,6 +43,9 @@ main.snow {
             padding: 25px;
             border-radius: 7px;
             width: fit-content;
+            h3 {
+                color: $pinkwhite;
+            }
             .specialty-title {
                 text-align: center;
                 img {

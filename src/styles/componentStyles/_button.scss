@@ -1,0 +1,48 @@
+button, a.btn {
+    background-color: transparent;
+}
+main.elegant {
+
+}
+main.snow {
+    .btn-primary-light {
+        color: $pinkwhite;
+        background: $pinkgradient;
+        border: none;
+        position: relative;
+        border-radius: 5px;
+        padding: 10px 25px;
+        z-index: 1;
+        margin: 30px auto;
+        display: block;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            border-radius: 3px;
+            background-color: $purple;
+            z-index: -1;
+        }
+        &:hover {
+            cursor: pointer;
+            color: $purple;
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .btn-secondary {
+        padding: 10px 15px;
+        color: $turquoise;
+        border: 1px solid $turquoise;
+        border-radius: 5px;
+        &:hover {
+            color: $pinkwhite;
+            background-color: $turquoise;
+            cursor: pointer;
+        }
+    }
+}

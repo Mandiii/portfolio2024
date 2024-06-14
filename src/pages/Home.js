@@ -70,8 +70,8 @@ function Home() {
             <div className='project-preview' key={project.id}>
                 <div className='text-part'>
                     <h3 className="title">{project.title}</h3>
-                    <p className="description">{project.description}</p>
-                    <button>More about this project</button>
+                    <p className="description">{project.type}</p>
+                    <button className="btn-secondary">More about this project</button>
                 </div>
                 <img src={BannerImg} alt="" />
             </div>
@@ -87,7 +87,7 @@ function Home() {
                 <div></div>
                 <div></div>
             </div>
-            <div className="banner">
+            <div className="home-banner">
                 <div className="text-part">
                     <h1 ><span className='pre-title'>Mandi Gansauge</span> <br/>
                     Portfolio</h1>
@@ -103,14 +103,33 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi
                 </div>
                 <Button 
                     btnText="About Me"
+                    btnClass="btn-primary-light"
                 />
+                
             </div>
             
             
             {/* <ProjectsSlider /> */}
-            <section id='projects'>
+            <section>
                 <h2>Some of my projects </h2>
-                {projectsPreview}
+                <div id='projects'>
+                   {projectsPreview} 
+                   
+                    <h3>Check out my entire portfolio</h3>
+                    <div id='gallery-preview'>
+                        <img src={BannerImg} alt="" />
+                        <img src={BannerImg} alt="" />
+                        <img src={BannerImg} alt="" />
+                        <img src={BannerImg} alt="" />
+                        <img src={BannerImg} alt="" />
+                   </div>
+                </div>
+                <Button 
+                    btnText="View entire portfolio"
+                    btnClass="btn-primary-light"
+                />
+                
+                
             </section>
         </main>
     )

@@ -1,6 +1,7 @@
+import icon from '../images/icons/design-specialty.svg'
 function About() {
     return (
-        <main className="elegant">
+        <main className="snow">
         <div className="elegant-deco-grid">
                 <div></div>
                 <div></div>
@@ -10,7 +11,7 @@ function About() {
                 <div></div>
             </div>
             <section>
-                <div className="banner">
+                <div className="about-banner">
                     <h1 ><span className='pre-title'>About Me</span> <br/>
                     Experience</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.
@@ -19,11 +20,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi
             </section>
             
             <section className="about-grid">
-                <div className="about-text">
-                    <h2><span className="pre-title">A little bit</span><br/>About Me</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.</p>
-                </div>
-
+                
                 <div className="about-timeline">
                     <div>
                         <h3>Prépa animation 2D</h3>
@@ -52,24 +49,32 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi
                     
                 </div>
 
+                <div className="about-text">
+                    <h2><span className="pre-title">A little bit</span><br/>About Me</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.</p>
+                </div>
+
                 <div className="spoken-languages">
                     <h2>Languages</h2>
-                    <div>
-                        <h3>English</h3>
-                        <p>Description</p>
+                    <div className="languages-container">
+                        <div>
+                            <h3>English</h3>
+                            <p>Description</p>
+                        </div>
+                        <div>
+                            <h3>English</h3>
+                            <p>Description</p>
+                        </div>
+                        <div>
+                            <h3>English</h3>
+                            <p>Description</p>
+                        </div>
+                        <div>
+                            <h3>English</h3>
+                            <p>Description</p>
+                        </div>
                     </div>
-                    <div>
-                        <h3>English</h3>
-                        <p>Description</p>
-                    </div>
-                    <div>
-                        <h3>English</h3>
-                        <p>Description</p>
-                    </div>
-                    <div>
-                        <h3>English</h3>
-                        <p>Description</p>
-                    </div>
+                    
                 </div>
             </section>
     </main>

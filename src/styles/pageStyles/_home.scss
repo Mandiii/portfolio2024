@@ -106,7 +106,7 @@ main.elegant {
     }
 }
 main.snow {
-    .banner {
+    .home-banner {
         background-image: url(../../images/banner-illustration-snow.png);
         background-size: cover;
         background-position: bottom;
@@ -116,13 +116,38 @@ main.snow {
         color: $purple;
     }
     #projects {
+        background-color: $pinkwhite;
+        border-radius: 10px;
+        margin: 30px 10%;
+        padding: 30px;
         .project-preview {
             display: flex;
+            align-items: center;
+            .text-part {
+                padding: 0 30px;
+                width: 50%;
+                h3 {
+                    margin-bottom: 0;
+                    font-size: 30px;
+                }
+                p {
+                    margin-top: 5px;
+                }
+            }
             img {
                 width: 50%;
+                border-radius: 5px;
             }
             &:nth-child(even) {
                 flex-direction: row-reverse;
+            }
+        }
+        #gallery-preview {
+            display: flex;
+            gap: 2.5%;
+            img {
+                width: 18%;
+                border-radius: 5px;         
             }
         }
     }

@@ -1,6 +1,6 @@
 function Button(props) {
     return(
-        <button>{props.btnText}</button>
+        <button className={props.btnClass} data={props.btnText}>{props.btnText}</button>
     )
     
 }
