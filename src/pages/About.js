@@ -1,5 +1,8 @@
-import icon from '../images/icons/design-specialty.svg'
+import mapLine from '../images/about-snow/map-line.svg'
+import { useSelector } from 'react-redux'
 function About() {
+
+    const theme = useSelector((state) => state.theme.theme)
     return (
         <main className="snow">
         <div className="elegant-deco-grid">
@@ -26,22 +29,27 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi
                         <h3>Prépa animation 2D</h3>
                         <p>Atelier de Sèvres</p>
                     </div>
+                    <img className='mapLine' src={mapLine}/>
                     <div>
                         <h3>Formation graphiste</h3>
                         <p>Online-Schule für Gestaltung</p>
                     </div>
+                    <img className='mapLine' src={mapLine}/>
                     <div>
                         <h3>Infographiste Metteur en Page</h3>
                         <p>AFPA Alençon</p>
                     </div>
+                    <img className='mapLine' src={mapLine}/>
                     <div>
                         <h3>Graphiste Multimédia</h3>
                         <p>Icademie</p>
                     </div>
+                    <img className='mapLine' src={mapLine}/>
                     <div>
                         <h3>Motion Designer</h3>
                         <p>Icademie</p>
                     </div>
+                    <img className='mapLine' src={mapLine}/>
                     <div>
                         <h3>Intégrateur Front-end</h3>
                         <p>OpenClassrooms</p>

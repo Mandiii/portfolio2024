@@ -1,0 +1,74 @@
+[
+    {
+        "id": "skelly",
+        "title": "",
+        "description": "",
+        "type": "",
+        "tags": "",
+        "date": "",
+        "duration": "",
+        "context": "",
+        "constraints": "",
+        "flex-row": {
+            "title": "",
+            "text": "",
+            "images" : [
+
+            ]
+        },
+        "image-text-block": {
+            "title": "",
+            "text": "",
+            "image": ""
+        },
+        "half-images": [
+
+        ],
+        "full-image": "",
+        "button": {
+            "text": "",
+            "link": ""
+        }
+    },
+    {
+        "id": "skelly",
+        "title": "Skelly the Brave",
+        "description": "Lorem",
+        "type": "Design",
+        "tags": ["Game", "Illustration "],
+        "date": "April 2024",
+        "duration": "3 Days",
+        "context": "Ludum Dare 55",
+        "constraints": "",
+        "flex-row": {
+            "title": "Characters",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",
+            "images" : [
+                "images/skelly/rip-1.png",
+                "images/skelly/rip-2.png",
+                "images/skelly/rip-cage.png",
+                "images/skelly/rip-x.png"
+            ]
+        },
+        "image-text-block": [
+            {
+                "title": "",
+                "text": "",
+                "image": ""
+            },
+            {
+                "title": "",
+                "text": "",
+                "image": ""
+            }
+        ],
+        "half-images": [
+            "images/"
+        ],
+        "full-image": "images/skelly/banner.png",
+        "button": {
+            "text": "",
+            "link": ""
+        }
+    }
+]

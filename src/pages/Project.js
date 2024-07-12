@@ -5,7 +5,35 @@ import char3 from "../images/project/granny.png";
 import char4 from "../images/project/plague.png";
 import char5 from "../images/project/witch-cat.png";
 import crypt from "../images/project/crypt.png";
+import { useParams } from "react-router";
+import { useNavigate } from "react-router";
+import { useState, useEffect } from "react";
 function Project() {
+
+        const {id} = useParams()    
+        const [currentProject, setCurrentProject] = useState()
+        const navigate = useNavigate()
+    
+        useEffect(()=> {
+            fetch('/projects.json')
+                .then(res=>res.json())
+                .then((data) => {
+                    console.log(data)
+                    const project = data.find(project => project.id === id)
+                    // if(project === undefined) {
+                    //     navigate("./NoPage")
+                    // }
+                    setCurrentProject(project)          
+                })
+        },[])
+        function createTags() {
+            return(currentProject.tags.map((tag, index) =>
+                <span>{tag}</span>
+            ))
+        }  
+        if (currentProject === undefined) {
+            return null
+        }
     return (
         <main className="project">
             <div className="titleBanner">

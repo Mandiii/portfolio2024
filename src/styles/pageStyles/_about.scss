@@ -52,8 +52,73 @@ main.snow {
     .about-text, .spoken-languages {
         background-color: $purple;
         color: $pinkwhite;
+        padding: 20px 25%;
         h2, h3 {
             color: $pinkwhite;
+        }
+    }
+    .about-timeline {
+            background: url(../../images/about-snow/final-bg.svg) no-repeat left bottom;
+            background-size: contain;
+            padding-bottom: 200px;
+        > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 200px;
+            padding: 0 25%;
+            h3 {
+                margin: 0;
+                font-size: 25px;
+                font-weight: 800;
+            }
+            p {
+                margin-top: 3px;
+                font-weight: 100;
+                color: $purple;
+            }
+            &:nth-of-type(even) {
+                align-items: end;
+            }
+            &:nth-of-type(odd) {
+                align-items: start;
+            }
+            &:nth-of-type(1) {
+                background: url(../../images/about-snow/tree-double.svg) no-repeat right center;
+                background-size: contain;
+            }
+            &:nth-of-type(2) {
+                background: url(../../images/about-snow/house-small.svg) no-repeat left center;
+                background-size: contain;
+            }
+            &:nth-of-type(3) {
+                background: url(../../images/about-snow/tree-triple.svg) no-repeat right center;
+                background-size: contain;
+            }
+            &:nth-of-type(4) {
+                background: url(../../images/about-snow/tree-single.svg) no-repeat left center;
+                background-size: contain;
+            }
+            &:nth-of-type(5) {
+                background: url(../../images/about-snow/house-big.svg) no-repeat right center;
+                background-size: contain;
+            }
+        }
+        .mapLine {
+            width: 100%;
+            height: 150px;
+            background: url(../../images/about-snow/map-line.svg) center no-repeat;
+            background-size: contain;
+            display: block;
+            margin: 20px 0;
+            &:nth-of-type(even) {
+                -moz-transform: scaleX(-1);
+                -o-transform: scaleX(-1);
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+                filter: FlipH;
+                -ms-filter: "FlipH"; 
+            }
         }
     }
 }
