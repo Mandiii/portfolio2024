@@ -2,7 +2,22 @@ import BannerImg from '../images/placeholderimg.png'
 import ProjectsSlider from '../components/ProjectsSlider'
 import Specialty from '../components/aboutComponents/Specialty'
 import Button from '../components/Button'
+import { useSelector } from 'react-redux'
+import getProjects from '../services/getProjects'
+
 function Home() {
+    const theme = useSelector((state) => state.theme.theme);
+    console.log(theme)
+
+    // async function loadProjects() {
+    //     try {
+    //       await getProjects();
+  
+    //     } catch (error) {
+    //       alert(error.message);
+    //     }
+    // }
+    
     const projects = [
         {
             id: "project-name1",
@@ -78,7 +93,7 @@ function Home() {
         )
     })
     return (
-        <main className='snow'>
+        <main className={theme}>
             <div className="elegant-deco-grid">
                 <div></div>
                 <div></div>
