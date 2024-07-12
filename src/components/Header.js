@@ -1,9 +1,12 @@
 import Logo from '../images/logo.svg'
 import { Link, NavLink } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 function Header() {
+
+    const theme = useSelector((state) => state.theme.theme);
     return(
-        <header className='snow'>
+        <header className={theme}>
             <nav>
                 <Link to='/'><img src={Logo} id='logo' alt="Mandi Gansauge" /></Link>
                 <div className='nav-text-links'>
