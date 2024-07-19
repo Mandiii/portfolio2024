@@ -1,0 +1,39 @@
+main#themeSelect {
+    text-align: center;
+    .buttons-container {
+        width: 70%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        button {
+            width: 33vw;
+            height: 32vw;
+            font-size: 80px;
+            border: none;
+            box-shadow: 2px 2px $bg-grey;
+            display: inline-flex;
+            align-items: start;
+            justify-content: center;
+            padding-top: 80px;
+            &#snow {
+                background: url(../../images/banner-illustration-snow.png) center no-repeat;
+                background-size: cover;
+                font-family: "Lust";
+                color: $purple;
+                font-weight: 800;
+                &.active {
+                    border: 7px solid $turquoise;
+                }
+            }
+            &#elegant {
+                background: url(../../images/icons/elegant-btn-bg.png) center no-repeat;
+                background-size: cover;
+                font-family: "Baskerville";
+                &.active {
+                    border: 7px solid $golden;
+                }
+            }
+        }
+    }
+}

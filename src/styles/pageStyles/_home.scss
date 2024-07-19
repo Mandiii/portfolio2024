@@ -138,9 +138,9 @@ main.snow {
                 width: 50%;
                 border-radius: 5px;
             }
-            &:nth-child(even) {
-                flex-direction: row-reverse;
-            }
+        }
+        a.project-preview-container:nth-child(even) .project-preview {
+            flex-direction: row-reverse;
         }
         #gallery-preview {
             display: flex;
