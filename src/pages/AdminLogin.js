@@ -2,7 +2,7 @@ import getAdminToken from "../services/getAdminToken";
 import { useDispatch, useSelector } from 'react-redux'
 import { adminLogin} from "../state/adminLogin/adminSlice";
 import { useNavigate } from "react-router";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function Login() {
     const navigate = useNavigate();
@@ -26,7 +26,7 @@ function Login() {
     }
   
     return (
-      <main>
+      <main className="admin">
         <section className="sign-in-content">
           <h1>Sign In</h1>
           <form onSubmit={(e) => e.preventDefault()}>
