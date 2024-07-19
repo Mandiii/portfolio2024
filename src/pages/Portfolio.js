@@ -1,42 +1,27 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import getProjects from '../services/getProjects'
 import placeholderImg from '../images/banner-illustration-snow.png'
 import filterDesign from '../images/icons/filter-design.png'
 import filterDev from '../images/icons/filter-dev.png'
 import filterMotion from '../images/icons/filter-motion.png'
 
 function Portfolio() {
-    const projects = [
-        {
-            id: "project-name1",
-            title: "Project title 1",
-            type: "Graphic Design",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",            
-            img: "",
-            tags: [
-                "illustration", "react"
-            ]
-        },
-        {
-            id: "project-name2",
-            title: "Project title 2",
-            type: "Motion Design",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",            
-            img: "",
-            tags: [
-                "illustration", "games", "ui"
-            ]
-        },
-        {
-            id: "project-name3",
-            title: "Project title 3",
-            type: "Front end",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",
-            img: "",
-            tags: [
-                "react", "ui"
-            ]
+    const [projects, setProjects] = useState([])
+
+    async function loadProjects() {
+        try {
+          setProjects(await getProjects());
+  
+        } catch (error) {
+          alert(error.message);
         }
-    ]
+    }
+    useEffect(() => {
+        loadProjects()
+        console.log(projects)
+    },[])
+    
     const [projectsList, setprojectList] = useState(projects)
     const [sortType, setSortType] = useState("")
     
@@ -51,13 +36,15 @@ function Portfolio() {
     }
     
     
-    const  renderedProjects= projectsList.map(project => {
+    const  renderedProjects= projects.map(project => {
         return(
-            <div className="project">
+            <Link to={`/${project._id}`} >
+                <div className="project">
                     <img src={placeholderImg} width="250px" alt="" />
                     <h2>{project.title}</h2>
                     <p>{project.type}</p>
                 </div>
+            </Link>
         )
     })
     return (

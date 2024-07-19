@@ -8,8 +8,9 @@ const getProjects = async() => {
     })
     if (response.ok) {
         const data = await response.json();
-        return data.body;
+        return data;
     } else if (response.status === 400) {
+        console.log("error")
         const error = await response.json();
         throw new Error(error.message);
     } else {

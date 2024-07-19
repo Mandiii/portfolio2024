@@ -2,13 +2,14 @@ const Project = require('../models/project');
 const fs = require('fs');
 
 exports.createProject = (req, res, next) => {
-  console.log(req.body)
+  console.log(JSON.parse(req.body))
+
     const project = req.body;
-    // const url = req.protocol + '://' + req.get('host');
+    const url = req.protocol + '://' + req.get('host');
     const newProject = new Project({
       title: project.title,
       description: project.description,
-      // coverImg: url + '/images/' + req.file.filename,
+      coverImg: url + '/images/' + req.file.filename,
       type: project.type,
       tags: project.tags,
       date: project.date,

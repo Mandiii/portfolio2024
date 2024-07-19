@@ -6,37 +6,52 @@ function AdminNewProject() {
   
     const title = document.getElementById("title")
     console.log(title)
-    const [formInfo, setFormInfo] = useState(
-      {
-        "title": title.value,
-        // "description": document.getElementById("title").value, 
-        // "type": document.getElementById("title").value,
-        // "tags": document.getElementById("title").value,
-        // "date": document.getElementById("title").value,
-        // "duration": document.getElementById("title").value,
-        // "context": document.getElementById("title").value,
-        // "constraints": document.getElementById("title").value
-      });
+    // const [formInfo, setFormInfo] = useState(
+    //   {
+    //     "title": "",
+    //     "description": "", 
+    //     "type": "",
+    //     // "tags": document.getElementById("title").value,
+    //     // "date": document.getElementById("title").value,
+    //     // "duration": document.getElementById("title").value,
+    //     // "context": document.getElementById("title").value,
+    //     // "constraints": document.getElementById("title").value
+    //   });
   
     // "coverImg": {coverImg},
     const token = useSelector((state) => state.admin);
-    let projectInfo = new FormData()
-    let image = document.getElementById("coverImg").files[0]
-    projectInfo.append("title", formInfo.title)
-    projectInfo.append("coverImg", image)
-    projectInfo.append("description", formInfo.description)
-    projectInfo.append("type", formInfo.type)
-    projectInfo.append("tags", formInfo.tags)
-    projectInfo.append("date", formInfo.date)
-    projectInfo.append("duration", formInfo.duration)
-    projectInfo.append("context", formInfo.context)
-    projectInfo.append("constraints", formInfo.constraints)
+    // let projectInfo = new FormData()
+    // let image = document.getElementById("coverImg").files[0]
+    // projectInfo.append("title", formInfo.title)
+    // projectInfo.append("coverImg", image)
+    // projectInfo.append("description", formInfo.description)
+    // projectInfo.append("type", formInfo.type)
+    // projectInfo.append("tags", formInfo.tags)
+    // projectInfo.append("date", formInfo.date)
+    // projectInfo.append("duration", formInfo.duration)
+    // projectInfo.append("context", formInfo.context)
+    // projectInfo.append("constraints", formInfo.constraints)
    
 
-    async function sendProject() {
+    async function sendProject(e) {
+      e.preventDefault()
+      console.log(e)
+      let coverImg = e.target["coverImg"].files[0]
+      console.log(coverImg)
+      let projectDetails = new FormData()
+      projectDetails.append("title", e.target["title"].value)
+      projectDetails.append("description", e.target["description"].value)
+      projectDetails.append("coverImg", coverImg)
+      projectDetails.append("type", e.target["type"].value)
+      projectDetails.append("tags", e.target["tags"].value)
+      projectDetails.append("date", e.target["date"].value)
+      projectDetails.append("duration", e.target["duration"].value)
+      projectDetails.append("context", e.target["context"].value)
+      projectDetails.append("constraints", e.target["constraints"].value)
+    
+      console.log(projectDetails)
       try {
-        console.log(projectInfo)
-        createProject(token, projectInfo)
+        createProject(token, projectDetails)  
       } catch (error) {
         alert(error.message)
       }
@@ -44,13 +59,13 @@ function AdminNewProject() {
     }
   
     return (
-      <main>
+      <main className='admin'>
         <section>
           <h1>New Project</h1>
-          <form onSubmit={(e) => e.preventDefault()}>
+          <form onSubmit={(e) => sendProject(e)}>
             <div className="input-wrapper">
               <label htmlFor="title">Project Title</label>
-              <input type="text" id="title" />
+              <input type="text" id="title"/>
             </div>
 
             <div className="input-wrapper">
@@ -94,7 +109,7 @@ function AdminNewProject() {
               <input type="text" id="constraints" />
             </div>
   
-            <button className="btn-primary" onClick={() => sendProject()}>Send</button>
+            <button className="btn-primary" >Send</button>
           </form>
         </section>
       </main>

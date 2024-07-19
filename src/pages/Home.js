@@ -3,44 +3,53 @@ import ProjectsSlider from '../components/ProjectsSlider'
 import Specialty from '../components/aboutComponents/Specialty'
 import Button from '../components/Button'
 import { useSelector } from 'react-redux'
+import { useEffect, useState } from 'react'
 import getProjects from '../services/getProjects'
+import { Link } from 'react-router-dom'
 
 function Home() {
+    const [projects, setProjects] = useState([])
     const theme = useSelector((state) => state.theme.theme);
     console.log(theme)
 
-    // async function loadProjects() {
-    //     try {
-    //       await getProjects();
+
+    async function loadProjects() {
+        try {
+          setProjects(await getProjects());
+          console.log(projects)
   
-    //     } catch (error) {
-    //       alert(error.message);
-    //     }
-    // }
-    
-    const projects = [
-        {
-            id: "project-name1",
-            title: "Project title 1",
-            type: "Design",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",            
-            img: ""
-        },
-        {
-            id: "project-name2",
-            title: "Project title 2",
-            type: "Design",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",            
-            img: ""
-        },
-        {
-            id: "project-name3",
-            title: "Project title 3",
-            type: "Design",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",
-            img: ""
+        } catch (error) {
+          alert(error.message);
         }
-    ]
+    }
+    useEffect(() => {
+        loadProjects()
+        console.log(projects)
+    },[])
+    
+    // const projects = [
+    //     {
+    //         id: "66803b75be04255cabf521dc",
+    //         title: "Project title 1",
+    //         type: "Design",
+    //         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",            
+    //         img: ""
+    //     },
+    //     {
+    //         id: "project-name2",
+    //         title: "Project title 2",
+    //         type: "Design",
+    //         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",            
+    //         img: ""
+    //     },
+    //     {
+    //         id: "project-name3",
+    //         title: "Project title 3",
+    //         type: "Design",
+    //         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",
+    //         img: ""
+    //     }
+    // ]
     const specialties = [
         {
             id:0,
@@ -81,15 +90,18 @@ function Home() {
         )
     })
     const projectsPreview = projects.map(project => {
+        console.log(projects)
         return(
-            <div className='project-preview' key={project.id}>
-                <div className='text-part'>
-                    <h3 className="title">{project.title}</h3>
-                    <p className="description">{project.type}</p>
-                    <button className="btn-secondary">More about this project</button>
+            <Link to={`/${project._id}`} className='project-preview-container'>
+                <div className='project-preview' key={project._id}>
+                    <div className='text-part'>
+                        <h3 className="title">{project.title}</h3>
+                        <p className="description">{project.type}</p>
+                        <button className="btn-secondary">More about this project</button>
+                    </div>
+                    <img src={project.coverImg} alt="" />
                 </div>
-                <img src={BannerImg} alt="" />
-            </div>
+            </Link>
         )
     })
     return (
@@ -109,7 +121,7 @@ function Home() {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.</p>
                 </div>
-                {/* <img src={BannerImg} alt="" /> */}
+                {theme==="elegant" && <img src={BannerImg} alt="" />}
             </div>
 
             <div className="specialties">
@@ -124,8 +136,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi
             </div>
             
             
-            {/* <ProjectsSlider /> */}
-            <section>
+            {projects.length > 0 && (<ProjectsSlider projectList = {projects} />)}
+            {theme === "snow" && <section>
                 <h2>Some of my projects </h2>
                 <div id='projects'>
                    {projectsPreview} 
@@ -145,7 +157,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi
                 />
                 
                 
-            </section>
+            </section>}
+
         </main>
     )
     

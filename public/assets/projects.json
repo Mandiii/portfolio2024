@@ -1,14 +1,7 @@
 [
     {
-        "id": "skelly",
+        "id": "x",
         "title": "",
-        "description": "",
-        "type": "",
-        "tags": "",
-        "date": "",
-        "duration": "",
-        "context": "",
-        "constraints": "",
         "flex-row": {
             "title": "",
             "text": "",
@@ -31,7 +24,7 @@
         }
     },
     {
-        "id": "skelly",
+        "id": "66803b75be04255cabf521dc",
         "title": "Skelly the Brave",
         "description": "Lorem",
         "type": "Design",
@@ -40,20 +33,20 @@
         "duration": "3 Days",
         "context": "Ludum Dare 55",
         "constraints": "",
-        "flex-row": {
+        "flexRow": {
             "title": "Characters",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",
             "images" : [
                 "images/skelly/rip-1.png",
                 "images/skelly/rip-2.png",
                 "images/skelly/rip-cage.png",
-                "images/skelly/rip-x.png"
+                "/public/assets/images/skelly/rip-x.png"
             ]
         },
         "image-text-block": [
             {
-                "title": "",
-                "text": "",
+                "title": "test",
+                "text": "test",
                 "image": ""
             },
             {

@@ -1,30 +1,9 @@
 import { useState } from 'react'
 import BannerImg from '../images/placeholderimg.png'
 import { Link } from 'react-router-dom'
-function ProjectsSlider() {
-    const projects = [
-        {
-            id: "project-name1",
-            title: "Project title 1",
-            type: "Design",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",            
-            img: ""
-        },
-        {
-            id: "project-name2",
-            title: "Project title 2",
-            type: "Design",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",            
-            img: ""
-        },
-        {
-            id: "project-name3",
-            title: "Project title 3",
-            type: "Design",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",
-            img: ""
-        }
-    ]
+function ProjectsSlider(props) {
+    const projects = props.projectList
+    console.log(projects)
     const [sliderIndex, setSliderIndex] = useState(0)
     const sliderItemsAmount = projects.length
     const sliderProject = projects[sliderIndex]
@@ -53,7 +32,7 @@ function ProjectsSlider() {
             <div className="sliderInfo">
                 <h2 className="project-title"><span className='project-type pre-title'>{sliderProject.type}</span> <br/>{sliderProject.title}</h2>
                 <p className="project-description">{sliderProject.description}</p>
-                <Link to={"/project/" + sliderProject.id}>View full project</Link>
+                <Link to={"/" + sliderProject._id}>View full project</Link>
             </div>
 
         </div>
