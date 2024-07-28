@@ -106,14 +106,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi
                 </div>}
                 
                    
-                <h3 className='center'>Check out my entire portfolio</h3>
-                <div id='gallery-preview'>
-                    <img src={BannerImg} alt="" />
-                    <img src={BannerImg} alt="" />
-                    <img src={BannerImg} alt="" />
-                    <img src={BannerImg} alt="" />
-                    <img src={BannerImg} alt="" />
-                </div>
+                {/* <h3 className='center'>Check out my entire portfolio</h3> */}
+                {/* <div id='gallery-preview'>
+                    <img src={projects[0].coverImg} alt={projects[0].title} />
+                </div> */}
                 <Link to='/portfolio' className='btn btn-primary-dark'>View entire portfolio</Link>
                 
             </section>

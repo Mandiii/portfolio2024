@@ -1,7 +1,7 @@
 [
     {
         "id": "",
-        "coverImg": "/assets/images/",
+        "coverImg": "/assets/images/kasa/kasa-cover.png",
         "title": "",
         "description": "",
         "sort": "design",
@@ -56,6 +56,64 @@
         "button": {
             "text": "Play the game here",
             "link": "https://stormsword.itch.io/summont"
+        }
+    },
+    {
+        "id": "",
+        "coverImg": "/assets/images/ohmyfood/ohmyfood-cover.png",
+        "title": "",
+        "description": "",
+        "sort": "design",
+        "pre-title": "",
+        "date": "",
+        "duration": "",
+        "context": "",
+        "fullImg": "/assets/images/",
+        "list": {
+            "listTitle": "Constraints",
+            "listElements": [
+                {
+                    "text": "Theme : Limited Space",
+                    "id": 0
+                },
+                {
+                    "text": "Time Limit : One weekend",
+                    "id": 1
+                }
+            ]
+        },
+        "button": {
+            "text": "",
+            "link": ""
+        }
+    },
+    {
+        "id": "",
+        "coverImg": "/assets/images/ohmyfood/ohmyfood-cover.png",
+        "title": "",
+        "description": "",
+        "sort": "design",
+        "pre-title": "",
+        "date": "",
+        "duration": "",
+        "context": "",
+        "fullImg": "/assets/images/",
+        "list": {
+            "listTitle": "Constraints",
+            "listElements": [
+                {
+                    "text": "Theme : Limited Space",
+                    "id": 0
+                },
+                {
+                    "text": "Time Limit : One weekend",
+                    "id": 1
+                }
+            ]
+        },
+        "button": {
+            "text": "",
+            "link": ""
         }
     }
 ]

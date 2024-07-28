@@ -201,7 +201,7 @@ main.snow {
         gap: 15px 3%;
         img {
             width: 48.5%;
-            &:last-child {
+            &:nth-child(5) {
                 display: none;
             }
         }
