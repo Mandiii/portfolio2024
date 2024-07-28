@@ -1,0 +1,57 @@
+{"specialties": [
+        {
+            "id":0,
+            "title": "Graphic Design",
+            "projectTypes": [
+                "Visual brand identity",
+                "UI Design",
+                "Print & Layout design",
+                "Illustration"
+            ]
+        },
+        {
+            "id":1,
+            "title": "Motion Design",
+            "projectTypes": [
+                "Logo Animation",
+                "Explainer video",
+                "Character animation"
+            ]
+        },
+        {
+            "id":2,
+            "title": "Front end dev",
+            "projectTypes": [
+                "Front end integration",
+                "Responsive design",
+                "Website animations"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "id": 0,
+            "language": "English",
+            "description": "I grew up speaking English in South Africa. I speak fluently.",
+            "icon": "icon file name"
+        },
+        {
+            "id": 1,
+            "language": "French",
+            "description": "I learnt French when my family moved to France 12 years ago. I speak fluently with a small accent.",
+            "icon": "icon file name"
+        },
+        {
+            "id": 2,
+            "language": "German",
+            "description": "I lived in Germany for a year and learnt as I went. I also did my first graphic design course in German.",
+            "icon": "icon file name"
+        },
+        {
+            "id": 3,
+            "language": "Afrikaans",
+            "description": "My first language is Afrikaans but I now only speak it with my close family.",
+            "icon": "icon file name"
+        }
+    ]
+}
