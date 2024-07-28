@@ -37,7 +37,7 @@ function Login() {
             </div>
             <div className="input-wrapper">
               <label htmlFor="password">Password</label>
-              <input type="text" id="password" value={password}
+              <input type="password" id="password" value={password}
                      onChange={(event) => setPassword(event.target.value)} />
             </div>
   

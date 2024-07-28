@@ -4,21 +4,6 @@ import createProject from '../services/createProject';
 
 function AdminNewProject() {
   
-    const title = document.getElementById("title")
-    console.log(title)
-    // const [formInfo, setFormInfo] = useState(
-    //   {
-    //     "title": "",
-    //     "description": "", 
-    //     "type": "",
-    //     // "tags": document.getElementById("title").value,
-    //     // "date": document.getElementById("title").value,
-    //     // "duration": document.getElementById("title").value,
-    //     // "context": document.getElementById("title").value,
-    //     // "constraints": document.getElementById("title").value
-    //   });
-  
-    // "coverImg": {coverImg},
     const token = useSelector((state) => state.admin);
     // let projectInfo = new FormData()
     // let image = document.getElementById("coverImg").files[0]
@@ -36,18 +21,27 @@ function AdminNewProject() {
     async function sendProject(e) {
       e.preventDefault()
       console.log(e)
-      let coverImg = e.target["coverImg"].files[0]
-      console.log(coverImg)
-      let projectDetails = new FormData()
-      projectDetails.append("title", e.target["title"].value)
-      projectDetails.append("description", e.target["description"].value)
-      projectDetails.append("coverImg", coverImg)
-      projectDetails.append("type", e.target["type"].value)
-      projectDetails.append("tags", e.target["tags"].value)
-      projectDetails.append("date", e.target["date"].value)
-      projectDetails.append("duration", e.target["duration"].value)
-      projectDetails.append("context", e.target["context"].value)
-      projectDetails.append("constraints", e.target["constraints"].value)
+      // let coverImg = e.target["coverImg"].files[0]
+      // console.log(coverImg)
+      let projectDetails = {
+        "title": e.target["title"].value,
+        "description": e.target["description"].value,
+        "type": e.target["type"].value,
+        "tags": e.target["tags"].value,
+        "date": e.target["date"].value,
+        "duration": e.target["duration"].value,
+        "context": e.target["context"].value,
+        "constraints": e.target["constraints"].value
+      }
+      // projectDetails.append("title", e.target["title"].value)
+      // projectDetails.append("description", e.target["description"].value)
+      // // projectDetails.append("coverImg", coverImg)
+      // projectDetails.append("type", e.target["type"].value)
+      // projectDetails.append("tags", e.target["tags"].value)
+      // projectDetails.append("date", e.target["date"].value)
+      // projectDetails.append("duration", e.target["duration"].value)
+      // projectDetails.append("context", e.target["context"].value)
+      // projectDetails.append("constraints", e.target["constraints"].value)
     
       console.log(projectDetails)
       try {
@@ -73,10 +67,10 @@ function AdminNewProject() {
               <input type="text" id="description" />
             </div>
 
-            <div className="input-wrapper">
+            {/* <div className="input-wrapper">
               <label htmlFor="coverImg">Cover Image</label>
               <input type="file" accept=".png, .jpg, .jpeg, .svg" id="coverImg" />
-            </div>
+            </div> */}
 
             <div className="input-wrapper">
               <label htmlFor="type">Type</label>

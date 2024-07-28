@@ -1,14 +1,39 @@
 main.elegant {
     background-color: #C9C5AE08;
-    .banner {
+    .home-banner {
         display: flex;
         gap: 30px;
+        position: relative;
         img {
             width: 50%;
+        }
+        &::before {
+            content: '';
+            width: 90%;
+            height: 100%;
+            position: absolute;
+            top: 35%;
+            left: -30%;
+            background-color: $golden;
+            opacity: 0.3;
+            z-index: -1;
+        }
+        @media (max-width: 950px) {
+            flex-direction: column;
+            margin: 0 10%;
+            img {
+                width: 100%;
+            }
         }
     }
     & > div:not(.elegant-deco-grid, .project-slider) {
         margin-left: 23.5%;
+        @media (max-width: 950px) {
+            margin-left: 10%;
+        }
+    }
+    .specialties-container {
+        margin-bottom: 30px;
     }
     .specialties {
         position: relative;
@@ -25,12 +50,14 @@ main.elegant {
             top: 40%;
             right: 0;
         }
+
     }
     .project-slider {
         width: 100%;
         display: flex;
         gap: 15px;
         margin: auto;
+        margin-bottom: 50px;
         padding: 40px 12% 40px 23.5%;
         position: relative;
         &::before, &::after {
@@ -72,18 +99,6 @@ main.elegant {
                 right: 10%;
             }
         }
-        .sliderInfo {
-            a {
-                border-bottom: 2px solid $black;
-                border-right: 2px solid $black;
-                padding: 0 10px 10px 0;
-                font-weight: 600;
-                text-align: right;
-                &:visited {
-                    color: inherit;
-                }
-            }
-        }
     }
     .elegant-deco-grid {
         display: flex;
@@ -115,6 +130,9 @@ main.snow {
         padding: 0 20%;
         color: $purple;
     }
+    .specialties {
+        margin-bottom: 50px;
+    }
     #projects {
         background-color: $pinkwhite;
         border-radius: 10px;
@@ -138,16 +156,53 @@ main.snow {
                 width: 50%;
                 border-radius: 5px;
             }
+            &:last-of-type {
+                margin-bottom: 50px;
+            }
         }
         a.project-preview-container:nth-child(even) .project-preview {
             flex-direction: row-reverse;
         }
-        #gallery-preview {
-            display: flex;
-            gap: 2.5%;
-            img {
-                width: 18%;
-                border-radius: 5px;         
+        
+    }
+    #gallery-preview {
+        img {
+            border-radius: 5px; 
+        }
+    }
+    @media (max-width: 950px) {
+        div.specialties-container {
+            flex-direction: column;
+            align-items: center;
+            div.specialty {
+                justify-content: center;
+                gap: 50px;
+                .specialty-title p {
+                    display: none;
+                }
+                div.types-of-projects {
+                    display: block;
+                }
+            }
+        }
+    }
+    
+}
+#gallery-preview {
+    margin: 30px 10%;
+    display: flex;
+    gap: 2.5%;
+    img {
+        width: 18%;                
+    }
+    @media (max-width: 950px) {
+        margin: 5%;
+        flex-wrap: wrap;
+        gap: 15px 3%;
+        img {
+            width: 48.5%;
+            &:last-child {
+                display: none;
             }
         }
     }

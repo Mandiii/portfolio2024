@@ -32,7 +32,7 @@ function ProjectsSlider(props) {
             <div className="sliderInfo">
                 <h2 className="project-title"><span className='project-type pre-title'>{sliderProject.type}</span> <br/>{sliderProject.title}</h2>
                 <p className="project-description">{sliderProject.description}</p>
-                <Link to={"/" + sliderProject._id}>View full project</Link>
+                <Link className='btn-primary-light' to={"/" + sliderProject.id}>View full project</Link>
             </div>
 
         </div>

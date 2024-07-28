@@ -1,4 +1,12 @@
 main.elegant {
+    .about-banner {
+        width: 60%;
+        margin-left: 23.5%;
+        @media (max-width: 950px) {
+            margin-left: 10%;
+            width: 80%;
+        }
+    }
     .about-grid {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -36,6 +44,13 @@ main.elegant {
                 }
             }
         }
+        @media (max-width: 950px) {
+            margin-left: 10%;
+        }
+        @media (max-width: 700px) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
 main.snow {
@@ -67,6 +82,10 @@ main.snow {
             justify-content: center;
             height: 200px;
             padding: 0 25%;
+            @media (max-width: 950px) {
+                padding: 0 3%;
+                justify-content: start;
+            }
             h3 {
                 margin: 0;
                 font-size: 25px;

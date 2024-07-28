@@ -4,6 +4,9 @@ main.elegant {
         margin-top: 50px;
         .specialty-title {
             width: 35.5%;
+            h3 {
+                font-size: 35px;
+            }
         }
         p {
             color: $golden;
@@ -23,6 +26,15 @@ main.elegant {
                     top: 40%;
                 }
             }
+        }
+        @media (max-width: 550px) {
+           flex-direction: column;
+           .specialty-title {
+            width: 100%;
+            h3 {
+                margin-bottom: 0;
+            }
+           }
         }
     }
 }

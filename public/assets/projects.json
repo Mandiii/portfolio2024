@@ -1,67 +1,61 @@
 [
     {
-        "id": "x",
+        "id": "",
+        "coverImg": "/assets/images/",
         "title": "",
-        "flex-row": {
-            "title": "",
-            "text": "",
-            "images" : [
-
+        "description": "",
+        "sort": "design",
+        "pre-title": "",
+        "date": "",
+        "duration": "",
+        "context": "",
+        "fullImg": "/assets/images/",
+        "list": {
+            "listTitle": "Constraints",
+            "listElements": [
+                {
+                    "text": "Theme : Limited Space",
+                    "id": 0
+                },
+                {
+                    "text": "Time Limit : One weekend",
+                    "id": 1
+                }
             ]
         },
-        "image-text-block": {
-            "title": "",
-            "text": "",
-            "image": ""
-        },
-        "half-images": [
-
-        ],
-        "full-image": "",
         "button": {
             "text": "",
             "link": ""
         }
     },
     {
-        "id": "66803b75be04255cabf521dc",
-        "title": "Skelly the Brave",
-        "description": "Lorem",
-        "type": "Design",
+        "id": "skelly",
+        "coverImg": "/assets/images/skelly/skelly-cover.png",
+        "title": "Skelly the Brave'nt",
+        "description": "Skelly the Brave'nt is a little game about an undead little skeletonm who is, as the title suggests, not very brave. Ihad a lot of fun illustrating the graphics and UI elements in Illustrator.",
+        "sort": "design",
+        "pre-title": "Illustration",
         "tags": ["Game", "Illustration "],
         "date": "April 2024",
         "duration": "3 Days",
         "context": "Ludum Dare 55",
-        "constraints": "",
-        "flexRow": {
-            "title": "Characters",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",
-            "images" : [
-                "images/skelly/rip-1.png",
-                "images/skelly/rip-2.png",
-                "images/skelly/rip-cage.png",
-                "/public/assets/images/skelly/rip-x.png"
+        "fullImg": "/assets/images/skelly/skelly-full.png",
+        "list": {
+            "listTitle": "Constraints",
+            "listElements": [
+                {
+                    "text": "Theme : Limited Space",
+                    "id": 0
+                },
+                {
+                    "text": "Time Limit : One weekend",
+                    "id": 1
+                }
             ]
         },
-        "image-text-block": [
-            {
-                "title": "test",
-                "text": "test",
-                "image": ""
-            },
-            {
-                "title": "",
-                "text": "",
-                "image": ""
-            }
-        ],
-        "half-images": [
-            "images/"
-        ],
-        "full-image": "images/skelly/banner.png",
         "button": {
-            "text": "",
-            "link": ""
+            "text": "Play the game here",
+            "link": "https://stormsword.itch.io/summont"
         }
     }
 ]

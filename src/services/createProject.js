@@ -6,8 +6,9 @@ const createProject = async(token, projectInfo) => {
             "content-Type": "application/json",
             "authorization": `Bearer ${token}`
         },
-        body: projectInfo
+        body: JSON.stringify(projectInfo)
     })
+    console.log(projectInfo)
     if (response.ok) {
         const data = await response.json();
         return data.body;

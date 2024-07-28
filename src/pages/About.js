@@ -1,10 +1,31 @@
+import { useEffect, useState } from 'react'
 import mapLine from '../images/about-snow/map-line.svg'
 import { useSelector } from 'react-redux'
 function About() {
 
     const theme = useSelector((state) => state.theme.theme)
+    const [languages, setLanguages] = useState([])
+
+    useEffect(() => {
+        fetch('/assets/about.json')
+            .then(res=>res.json())
+            .then((data) => {
+                console.log(data.languages)
+                setLanguages(data.languages)
+                console.log(languages)
+            })
+    },[])
+
+    const languagesList = languages.map(language => {
+        return(
+            <div key={language.id}>
+                <h3>{language.language}</h3>
+                <p>{language.description}</p>
+            </div>
+        )
+    })
     return (
-        <main className="snow">
+        <main className={theme}>
         <div className="elegant-deco-grid">
                 <div></div>
                 <div></div>
@@ -29,27 +50,27 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi
                         <h3>Prépa animation 2D</h3>
                         <p>Atelier de Sèvres</p>
                     </div>
-                    <img className='mapLine' src={mapLine}/>
+                    {theme === "snow" && <img className='mapLine' src={mapLine}/>}
                     <div>
                         <h3>Formation graphiste</h3>
                         <p>Online-Schule für Gestaltung</p>
                     </div>
-                    <img className='mapLine' src={mapLine}/>
+                    {theme === "snow" && <img className='mapLine' src={mapLine}/>}
                     <div>
                         <h3>Infographiste Metteur en Page</h3>
                         <p>AFPA Alençon</p>
                     </div>
-                    <img className='mapLine' src={mapLine}/>
+                    {theme === "snow" && <img className='mapLine' src={mapLine}/>}
                     <div>
                         <h3>Graphiste Multimédia</h3>
                         <p>Icademie</p>
                     </div>
-                    <img className='mapLine' src={mapLine}/>
+                    {theme === "snow" && <img className='mapLine' src={mapLine}/>}
                     <div>
                         <h3>Motion Designer</h3>
                         <p>Icademie</p>
                     </div>
-                    <img className='mapLine' src={mapLine}/>
+                    {theme === "snow" && <img className='mapLine' src={mapLine}/>}
                     <div>
                         <h3>Intégrateur Front-end</h3>
                         <p>OpenClassrooms</p>
@@ -65,22 +86,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi
                 <div className="spoken-languages">
                     <h2>Languages</h2>
                     <div className="languages-container">
-                        <div>
-                            <h3>English</h3>
-                            <p>Description</p>
-                        </div>
-                        <div>
-                            <h3>English</h3>
-                            <p>Description</p>
-                        </div>
-                        <div>
-                            <h3>English</h3>
-                            <p>Description</p>
-                        </div>
-                        <div>
-                            <h3>English</h3>
-                            <p>Description</p>
-                        </div>
+                        {languagesList}
                     </div>
                     
                 </div>

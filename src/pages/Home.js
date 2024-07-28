@@ -1,85 +1,47 @@
 import BannerImg from '../images/placeholderimg.png'
 import ProjectsSlider from '../components/ProjectsSlider'
 import Specialty from '../components/aboutComponents/Specialty'
-import Button from '../components/Button'
 import { useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
-import getProjects from '../services/getProjects'
+// import getProjects from '../services/getProjects'
 import { Link } from 'react-router-dom'
 
 function Home() {
     const [projects, setProjects] = useState([])
     const theme = useSelector((state) => state.theme.theme);
-    console.log(theme)
+    const [specialties, setSpecialties] = useState([])
 
 
-    async function loadProjects() {
-        try {
-          setProjects(await getProjects());
-          console.log(projects)
+    // async function loadProjects() {
+    //     try {
+    //       setProjects(await getProjects());
+    //       console.log(projects)
   
-        } catch (error) {
-          alert(error.message);
-        }
-    }
+    //     } catch (error) {
+    //       alert(error.message);
+    //     }
+    // }
     useEffect(() => {
-        loadProjects()
+        // loadProjects()
+        fetch('/assets/projects.json')
+            .then(res=>res.json())
+            .then((data) => {
+                console.log(data)
+                setProjects(data)
+                console.log(projects)    
+                console.log(projects.length)  
+            })
         console.log(projects)
+        fetch('/assets/about.json')
+            .then(res=>res.json())
+            .then((data) => {
+                console.log(data.specialties)
+                setSpecialties(data.specialties)
+                console.log(specialties)    
+                console.log(specialties.length)  
+            })
     },[])
     
-    // const projects = [
-    //     {
-    //         id: "66803b75be04255cabf521dc",
-    //         title: "Project title 1",
-    //         type: "Design",
-    //         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",            
-    //         img: ""
-    //     },
-    //     {
-    //         id: "project-name2",
-    //         title: "Project title 2",
-    //         type: "Design",
-    //         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",            
-    //         img: ""
-    //     },
-    //     {
-    //         id: "project-name3",
-    //         title: "Project title 3",
-    //         type: "Design",
-    //         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.",
-    //         img: ""
-    //     }
-    // ]
-    const specialties = [
-        {
-            id:0,
-            title: "Graphic Design",
-            projectTypes: [
-                "Visual brand identity",
-                "UI Design",
-                "Print & Layout design",
-                "Illustration"
-            ],
-        },
-        {
-            id:1,
-            title: "Motion Design",
-            projectTypes: [
-                "Logo Animation",
-                "Explainer video",
-                "Character animation"
-            ],
-        },
-        {
-            id:2,
-            title: "Front end dev",
-            projectTypes: [
-                "Front end integration",
-                "Responsive design",
-                "Website animations"
-            ],
-        }
-    ]
     const specialtiesList = specialties.map(specialty => {
         return(
             <Specialty 
@@ -92,8 +54,8 @@ function Home() {
     const projectsPreview = projects.map(project => {
         console.log(projects)
         return(
-            <Link to={`/${project._id}`} className='project-preview-container'>
-                <div className='project-preview' key={project._id}>
+            <Link to={`/${project.id}`} className='project-preview-container'>
+                <div className='project-preview' key={project.id}>
                     <div className='text-part'>
                         <h3 className="title">{project.title}</h3>
                         <p className="description">{project.type}</p>
@@ -128,36 +90,33 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi
                 <div className='specialties-container'>
                     {specialtiesList}
                 </div>
-                <Button 
-                    btnText="About Me"
-                    btnClass="btn-primary-light"
-                />
+                <Link to='/about' className='btn btn-primary-light'>About Me</Link>
                 
             </div>
             
-            
-            {projects.length > 0 && (<ProjectsSlider projectList = {projects} />)}
-            {theme === "snow" && <section>
-                <h2>Some of my projects </h2>
-                <div id='projects'>
-                   {projectsPreview} 
-                   
-                    <h3>Check out my entire portfolio</h3>
-                    <div id='gallery-preview'>
-                        <img src={BannerImg} alt="" />
-                        <img src={BannerImg} alt="" />
-                        <img src={BannerImg} alt="" />
-                        <img src={BannerImg} alt="" />
-                        <img src={BannerImg} alt="" />
-                   </div>
-                </div>
-                <Button 
-                    btnText="View entire portfolio"
-                    btnClass="btn-primary-light"
-                />
-                
-                
+            {theme === "elegant" &&<section>
+                {projects.length > 0 && (<ProjectsSlider projectList = {projects} />)}
             </section>}
+            <section>
+                {theme === "snow" &&<div>
+                    <h2>Some of my projects </h2>
+                    <div id='projects'>
+                        {projectsPreview} 
+                    </div>
+                </div>}
+                
+                   
+                <h3 className='center'>Check out my entire portfolio</h3>
+                <div id='gallery-preview'>
+                    <img src={BannerImg} alt="" />
+                    <img src={BannerImg} alt="" />
+                    <img src={BannerImg} alt="" />
+                    <img src={BannerImg} alt="" />
+                    <img src={BannerImg} alt="" />
+                </div>
+                <Link to='/portfolio' className='btn btn-primary-dark'>View entire portfolio</Link>
+                
+            </section>
 
         </main>
     )

@@ -35,5 +35,20 @@ main#themeSelect {
                 }
             }
         }
+        @media (max-width: 950px) {
+            width: 80%;
+            button {
+                width: 38vw;
+                height: 38vw;
+            }
+        }
+        @media (max-width: 650px) {
+            width: 90%;
+            flex-direction: column;
+            gap: 15px;
+            button {
+                width: 100%;
+            }
+        }
     }
 }
