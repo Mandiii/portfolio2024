@@ -2,7 +2,7 @@
   "name": "portfolio2024",
   "version": "0.1.0",
   "private": true,
-  "homepage": " https://mandiii.github.io/portfolio2024/",
+  "homepage": " https://mandiii.github.io",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.2",
     "@testing-library/jest-dom": "^5.17.0",
