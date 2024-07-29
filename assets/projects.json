@@ -28,7 +28,7 @@
         "id": "skelly",
         "coverImg": "/assets/images/skelly/skelly-cover.png",
         "title": "Skelly the Brave'nt",
-        "description": "Skelly the Brave'nt is a little game about an undead little skeletonm who is, as the title suggests, not very brave. Ihad a lot of fun illustrating the graphics and UI elements in Illustrator.",
+        "description": "Skelly the Brave'nt is a little game about an undead little skeleton.",
         "sort": "design",
         "pre-title": "Illustration",
         "tags": ["Game", "Illustration "],
@@ -56,7 +56,7 @@
     },
     {
         "id": "ohmyfood",
-        "coverImg": "/assets/images/ohmyfood/ohmyfood-cover.png",
+        "coverImg": "/assets/images/ohmyfood/ohmyfood.png",
         "title": "Oh My Food",
         "description": "This was a school assignment to practice HTML and CSS as well as learning some basic CSS animations.",
         "sort": "dev",
@@ -64,7 +64,7 @@
         "date": "April 2023",
         "duration": "1 month",
         "context": "School assignment",
-        "fullImg": "/assets/images/ohmyfood/ohmyfood.png",
+        "fullImg": "/assets/images/ohmyfood/ohmyfood-cover.png",
         "list": {
             "listTitle": "Skills learnt",
             "listElements": [
@@ -81,35 +81,6 @@
         "button": {
             "text": "See the website here",
             "link": "https://mandiii.github.io/ohmyfood/"
-        }
-    },
-    {
-        "id": "",
-        "coverImg": "/assets/images/ohmyfood/ohmyfood-cover.png",
-        "title": "",
-        "description": "",
-        "sort": "design",
-        "pre-title": "",
-        "date": "",
-        "duration": "",
-        "context": "",
-        "fullImg": "/assets/images/",
-        "list": {
-            "listTitle": "Constraints",
-            "listElements": [
-                {
-                    "text": "Theme : Limited Space",
-                    "id": 0
-                },
-                {
-                    "text": "Time Limit : One weekend",
-                    "id": 1
-                }
-            ]
-        },
-        "button": {
-            "text": "",
-            "link": ""
         }
     }
 ]
