@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import BannerImg from '../images/placeholderimg.png'
 import { Link } from 'react-router-dom'
 function ProjectsSlider(props) {
     const projects = props.projectList
@@ -28,7 +27,9 @@ function ProjectsSlider(props) {
                 Next
             </button>
 
-            <img src={BannerImg} alt="" />
+            <div className='sliderImg'>
+                <img src={sliderProject.coverImg} alt={sliderProject.title} />
+            </div>
             <div className="sliderInfo">
                 <h2 className="project-title"><span className='project-type pre-title'>{sliderProject.type}</span> <br/>{sliderProject.title}</h2>
                 <p className="project-description">{sliderProject.description}</p>

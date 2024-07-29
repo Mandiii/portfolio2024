@@ -77,8 +77,16 @@ main.elegant {
             width: 10%;
             right: 0;
         }
-        img {
+        .sliderImg {
             width: 40.1%;
+            display: flex;
+            align-items: center;
+            img {
+                width: 100%;
+            }            
+        }
+        .sliderInfo {
+            width: 50%;
         }
         button.slider-navigate {
             position: absolute;
@@ -97,6 +105,15 @@ main.elegant {
             }
             &.next {
                 right: 10%;
+            }
+        }
+        @media (max-width: 950px) {
+            flex-direction: column;
+            .sliderImg {
+                width: 100%;
+            }
+            .sliderInfo {
+                width: 100%;
             }
         }
     }
@@ -162,6 +179,19 @@ main.snow {
         }
         a.project-preview-container:nth-child(even) .project-preview {
             flex-direction: row-reverse;
+        }
+        @media (max-width: 700px) {
+            a.project-preview-container:nth-child(even) .project-preview, .project-preview {
+                flex-direction: column-reverse;
+                .text-part {
+                    width: 100%;
+                    text-align: center;
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+            
         }
         
     }
