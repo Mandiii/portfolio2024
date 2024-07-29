@@ -1,4 +1,4 @@
-import BannerImg from '../images/placeholderimg.png'
+// import BannerImg from '../images/placeholderimg.png'
 import ProjectsSlider from '../components/ProjectsSlider'
 import Specialty from '../components/aboutComponents/Specialty'
 import { useSelector } from 'react-redux'
@@ -79,7 +79,7 @@ function Home() {
                     Portfolio</h1>
                     <p></p>
                 </div>
-                {theme==="elegant" && <img src={BannerImg} alt="" />}
+                {/* {theme==="elegant" && <img src={BannerImg} alt="" />} */}
             </div>
 
             <div className="specialties">
