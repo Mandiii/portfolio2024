@@ -1,31 +1,27 @@
 [
     {
-        "id": "",
+        "id": "kasa",
         "coverImg": "/assets/images/kasa/kasa-cover.png",
-        "title": "",
-        "description": "",
-        "sort": "design",
-        "pre-title": "",
-        "date": "",
-        "duration": "",
-        "context": "",
-        "fullImg": "/assets/images/",
+        "title": "Kasa",
+        "description": "This was an assignment for my web integration studies, it was the first react app that I ever made.",
+        "sort": "dev",
+        "pre-title": "React integration",
+        "date": "August 2023",
+        "duration": "2 weeks",
+        "context": "School assignment",
+        "fullImg": "/assets/images/kasa/kasa-full.png",
         "list": {
-            "listTitle": "Constraints",
+            "listTitle": "Skills learnt",
             "listElements": [
                 {
-                    "text": "Theme : Limited Space",
+                    "text": "React",
                     "id": 0
                 },
                 {
-                    "text": "Time Limit : One weekend",
+                    "text": "Sass",
                     "id": 1
                 }
             ]
-        },
-        "button": {
-            "text": "",
-            "link": ""
         }
     },
     {
@@ -44,7 +40,7 @@
             "listTitle": "Constraints",
             "listElements": [
                 {
-                    "text": "Theme : Limited Space",
+                    "text": "Theme : Summoning",
                     "id": 0
                 },
                 {
@@ -59,32 +55,32 @@
         }
     },
     {
-        "id": "",
+        "id": "ohmyfood",
         "coverImg": "/assets/images/ohmyfood/ohmyfood-cover.png",
-        "title": "",
-        "description": "",
-        "sort": "design",
-        "pre-title": "",
-        "date": "",
-        "duration": "",
-        "context": "",
-        "fullImg": "/assets/images/",
+        "title": "Oh My Food",
+        "description": "This was a school assignment to practice HTML and CSS as well as learning some basic CSS animations.",
+        "sort": "dev",
+        "pre-title": "CSS animations",
+        "date": "April 2023",
+        "duration": "1 month",
+        "context": "School assignment",
+        "fullImg": "/assets/images/ohmyfood/ohmyfood.png",
         "list": {
-            "listTitle": "Constraints",
+            "listTitle": "Skills learnt",
             "listElements": [
                 {
-                    "text": "Theme : Limited Space",
+                    "text": "HTML & CSS",
                     "id": 0
                 },
                 {
-                    "text": "Time Limit : One weekend",
+                    "text": "CSS animations",
                     "id": 1
                 }
             ]
         },
         "button": {
-            "text": "",
-            "link": ""
+            "text": "See the website here",
+            "link": "https://mandiii.github.io/ohmyfood/"
         }
     },
     {
