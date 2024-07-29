@@ -1,11 +1,39 @@
 [
     {
+        "id": "hellostack",
+        "coverImg": "/assets/images/hellostack/hellostack-cover.png",
+        "title": "Hello Stack",
+        "description": "Hello Stack is the company I work for. I designed did the visual identity with some fun character animations and did some of the website integration.",
+        "sort": "motion",
+        "pretitle": "Motion Design and integration",
+        "date": "2022 - 2023",
+        "context": "Professional project",
+        "fullImg": "/assets/images/hellostack/hellostack-full.png",
+        "list": {
+            "listTitle": "Skills learnt",
+            "listElements": [
+                {
+                    "text": "Vue.js",
+                    "id": 0
+                },
+                {
+                    "text": "Motion Design",
+                    "id": 1
+                }
+            ]
+        },
+        "button": {
+            "text": "See the animation here",
+            "link": "https://hellostack.fr/maintenance"
+        }
+    },
+    {
         "id": "kasa",
         "coverImg": "/assets/images/kasa/kasa-cover.png",
         "title": "Kasa",
         "description": "This was an assignment for my web integration studies, it was the first react app that I ever made.",
         "sort": "dev",
-        "pre-title": "React integration",
+        "pretitle": "React integration",
         "date": "August 2023",
         "duration": "2 weeks",
         "context": "School assignment",
@@ -28,9 +56,9 @@
         "id": "skelly",
         "coverImg": "/assets/images/skelly/skelly-cover.png",
         "title": "Skelly the Brave'nt",
-        "description": "Skelly the Brave'nt is a little game about an undead little skeleton.",
+        "description": "Skelly the Brave'nt is a little game about an undead little skeletonm who is, as the title suggests, not very brave. Ihad a lot of fun illustrating the graphics and UI elements in Illustrator.",
         "sort": "design",
-        "pre-title": "Illustration",
+        "pretitle": "Illustration",
         "tags": ["Game", "Illustration "],
         "date": "April 2024",
         "duration": "3 Days",
@@ -60,7 +88,7 @@
         "title": "Oh My Food",
         "description": "This was a school assignment to practice HTML and CSS as well as learning some basic CSS animations.",
         "sort": "dev",
-        "pre-title": "CSS animations",
+        "pretitle": "CSS animations",
         "date": "April 2023",
         "duration": "1 month",
         "context": "School assignment",

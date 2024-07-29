@@ -16,11 +16,12 @@ button, a.btn {
 }
 main.elegant {
     .btn-primary-light, .btn-primary-dark {
-        border-bottom: 2px solid $black;
-        border-right: 2px solid $black;
+        border-bottom: 2px solid $golden;
+        border-right: 2px solid $golden;
         padding: 0 10px 10px 0;
         font-weight: 600;
         text-align: right;
+        color: $black;
         &:visited {
             color: inherit;
         }

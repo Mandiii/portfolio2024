@@ -66,7 +66,7 @@ function Portfolio() {
                 <div className="project">
                     <img src={project.coverImg} alt={project.title}/>
                     <h2>{project.title}</h2>
-                    <p>{project.description}</p>
+                    <p>{project.pretitle}</p>
                 </div>
             </Link>
         )
@@ -87,10 +87,10 @@ function Portfolio() {
                         <img src={filterDesign} alt="" />
                         <p>Graphic Design</p>
                     </button>
-                    {/* <button className={sortType==="motion"? "active filterBtn" : "filterBtn"} onClick={() => updateProjectList("motion")}>
+                    <button className={sortType==="motion"? "active filterBtn" : "filterBtn"} onClick={() => updateProjectList("motion")}>
                         <img src={filterMotion} alt="" />
                         <p>Motion Design</p>
-                    </button> */}
+                    </button>
                     <button className={sortType==="dev"? "active filterBtn" : "filterBtn"} onClick={() => updateProjectList("dev")}>
                         <img src={filterDev} alt="" />
                         <p>Front end</p>

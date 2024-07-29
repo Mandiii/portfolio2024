@@ -55,10 +55,11 @@ main.elegant {
     .project-slider {
         width: 100%;
         display: flex;
-        gap: 15px;
+        justify-content: space-around;
+        gap: 20px;
         margin: auto;
         margin-bottom: 50px;
-        padding: 40px 12% 40px 23.5%;
+        padding: 40px 10%;
         position: relative;
         &::before, &::after {
             content: '';
@@ -78,7 +79,7 @@ main.elegant {
             right: 0;
         }
         .sliderImg {
-            width: 40.1%;
+            width: 50%;
             display: flex;
             align-items: center;
             img {
@@ -86,7 +87,10 @@ main.elegant {
             }            
         }
         .sliderInfo {
-            width: 50%;
+            width: 40%;
+            .project-title {
+                margin-bottom: 5px;
+            }
         }
         button.slider-navigate {
             position: absolute;
@@ -101,10 +105,10 @@ main.elegant {
                 border-bottom: 2px solid $black;
             }
             &.prev {
-                left: 10%;
+                left: 5%;
             }
             &.next {
-                right: 10%;
+                right: 5%;
             }
         }
         @media (max-width: 950px) {
