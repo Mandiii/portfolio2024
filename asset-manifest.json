@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.8412befa.css",
-    "main.js": "/static/js/main.f91d2dea.js",
-    "static/media/placeholderimg.png": "/static/media/placeholderimg.8fc9ebb5e4106442aea2.png",
-    "static/media/banner-illustration-snow.png": "/static/media/banner-illustration-snow.457e2dc25df136a5814c.png",
-    "static/media/about-bg.png": "/static/media/about-bg.1c7f6d67710555440186.png",
-    "static/media/elegant-btn-bg.png": "/static/media/elegant-btn-bg.42149d5defdd3a0563ce.png",
-    "static/media/house-big.svg": "/static/media/house-big.7bd62ecca2e29664ad1c.svg",
-    "static/media/tree-triple.svg": "/static/media/tree-triple.ced518df71cdba0471bd.svg",
-    "static/media/house-small.svg": "/static/media/house-small.399f7134f5dcad1e3ee9.svg",
-    "static/media/tree-double.svg": "/static/media/tree-double.4c432f3d23a83c79f9de.svg",
-    "static/media/final-bg.svg": "/static/media/final-bg.97152e196f23dc36fbe1.svg",
-    "static/media/tree-single.svg": "/static/media/tree-single.12bb80015088df420b74.svg",
-    "static/media/logo.svg": "/static/media/logo.8a385c2325574f20705dd442ea8c809c.svg",
-    "static/media/map-line.svg": "/static/media/map-line.d79508fe6eda013d6337ce398f8fd07d.svg",
-    "index.html": "/index.html",
-    "main.8412befa.css.map": "/static/css/main.8412befa.css.map",
-    "main.f91d2dea.js.map": "/static/js/main.f91d2dea.js.map"
+    "main.css": "/portfolio2024/static/css/main.14c1f10e.css",
+    "main.js": "/portfolio2024/static/js/main.18c29667.js",
+    "static/media/placeholderimg.png": "/portfolio2024/static/media/placeholderimg.8fc9ebb5e4106442aea2.png",
+    "static/media/banner-illustration-snow.png": "/portfolio2024/static/media/banner-illustration-snow.457e2dc25df136a5814c.png",
+    "static/media/about-bg.png": "/portfolio2024/static/media/about-bg.1c7f6d67710555440186.png",
+    "static/media/elegant-btn-bg.png": "/portfolio2024/static/media/elegant-btn-bg.42149d5defdd3a0563ce.png",
+    "static/media/house-big.svg": "/portfolio2024/static/media/house-big.7bd62ecca2e29664ad1c.svg",
+    "static/media/tree-triple.svg": "/portfolio2024/static/media/tree-triple.ced518df71cdba0471bd.svg",
+    "static/media/house-small.svg": "/portfolio2024/static/media/house-small.399f7134f5dcad1e3ee9.svg",
+    "static/media/tree-double.svg": "/portfolio2024/static/media/tree-double.4c432f3d23a83c79f9de.svg",
+    "static/media/final-bg.svg": "/portfolio2024/static/media/final-bg.97152e196f23dc36fbe1.svg",
+    "static/media/tree-single.svg": "/portfolio2024/static/media/tree-single.12bb80015088df420b74.svg",
+    "static/media/logo.svg": "/portfolio2024/static/media/logo.8a385c2325574f20705dd442ea8c809c.svg",
+    "static/media/map-line.svg": "/portfolio2024/static/media/map-line.d79508fe6eda013d6337ce398f8fd07d.svg",
+    "index.html": "/portfolio2024/index.html",
+    "main.14c1f10e.css.map": "/portfolio2024/static/css/main.14c1f10e.css.map",
+    "main.18c29667.js.map": "/portfolio2024/static/js/main.18c29667.js.map"
   },
   "entrypoints": [
-    "static/css/main.8412befa.css",
-    "static/js/main.f91d2dea.js"
+    "static/css/main.14c1f10e.css",
+    "static/js/main.18c29667.js"
   ]
 }
