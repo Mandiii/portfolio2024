@@ -28,8 +28,6 @@ function Home() {
             .then((data) => {
                 console.log(data)
                 setProjects(data)
-                console.log(projects)    
-                console.log(projects.length)  
             })
         console.log(projects)
         fetch('/assets/about.json')
@@ -37,8 +35,6 @@ function Home() {
             .then((data) => {
                 console.log(data.specialties)
                 setSpecialties(data.specialties)
-                console.log(specialties)    
-                console.log(specialties.length)  
             })
     },[])
     
@@ -48,6 +44,7 @@ function Home() {
                 key={specialty.id}
                 title={specialty.title}
                 projectTypes={specialty.projectTypes}
+                img ={specialty.img}
             />
         )
     })

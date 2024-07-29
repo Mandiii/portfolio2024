@@ -1,6 +1,7 @@
 {"specialties": [
         {
             "id":0,
+            "img": "/assets/images/design-specialty.svg",
             "title": "Graphic Design",
             "projectTypes": [
                 "Visual brand identity",
@@ -11,6 +12,7 @@
         },
         {
             "id":1,
+            "img": "/assets/images/motion-specialty.svg",
             "title": "Motion Design",
             "projectTypes": [
                 "Logo Animation",
@@ -20,6 +22,7 @@
         },
         {
             "id":2,
+            "img": "/assets/images/dev-specialty.svg",
             "title": "Front end dev",
             "projectTypes": [
                 "Front end integration",
