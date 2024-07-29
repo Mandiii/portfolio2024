@@ -80,8 +80,7 @@ function Home() {
                 <div className="text-part">
                     <h1 ><span className='pre-title'>Mandi Gansauge</span> <br/>
                     Portfolio</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.</p>
+                    <p></p>
                 </div>
                 {theme==="elegant" && <img src={BannerImg} alt="" />}
             </div>

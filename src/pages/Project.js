@@ -1,5 +1,4 @@
-import crypt from "../images/project/crypt.png";
-import { useParams } from "react-router";
+ import { useParams } from "react-router";
 import { useNavigate } from "react-router";
 import { useState, useEffect } from "react";
 
@@ -80,7 +79,7 @@ function Project() {
             <section className="fullwidth">
                 <img src={process.env.PUBLIC_URL + projectContent.fullImg} />
             </section>
-            <a href={projectContent.button.link} target="_blanc" className="btn btn-neutral">{projectContent.button.text}</a>
+            {projectContent.button && <a href={projectContent.button.link} target="_blanc" className="btn btn-neutral">{projectContent.button.text}</a>}
                 
         </main>
     )

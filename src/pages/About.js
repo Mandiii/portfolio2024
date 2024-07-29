@@ -38,9 +38,8 @@ function About() {
                 <div className="about-banner">
                     <h1 ><span className='pre-title'>About Me</span> <br/>
                     Experience</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.</p>
-            </div>
+                    <p>I initially started  with studying graphic design, but in each of the courses I did there was a short chapter about HTML and CSS and I always really enjoyed it. I then decided to study front end integration to be able to design a web page and code it myself. I also did an apprenticeship in motion design for a year where I learnt to create animated ads and explainer videos. Since then I've been an apprentice at a web agengy doing all sorts of tasks from design to character animations to web integration.</p>
+                </div>
             </section>
             
             <section className="about-grid">
@@ -52,7 +51,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi
                     </div>
                     {theme === "snow" && <img className='mapLine' src={mapLine}/>}
                     <div>
-                        <h3>Formation graphiste</h3>
+                        <h3>Graphic design course</h3>
                         <p>Online-Schule für Gestaltung</p>
                     </div>
                     {theme === "snow" && <img className='mapLine' src={mapLine}/>}
@@ -80,7 +79,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi
 
                 <div className="about-text">
                     <h2><span className="pre-title">A little bit</span><br/>About Me</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus enim mi, vitae porttitor odio porttitor ac. Nulla ut neque ut enim varius aliquam nec a augue.</p>
+                    <p>I love designing things, from game characters to websites, and now that I understand how web integration works I am able to keep in that in mind while designing which makes it much easier to integrate. I also really enjoy illustration and character design.</p>
                 </div>
 
                 <div className="spoken-languages">
