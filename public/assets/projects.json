@@ -50,6 +50,10 @@
                     "id": 1
                 }
             ]
+        },
+        "button": {
+            "text": "See the Girhub repository",
+            "link": "https://github.com/Mandiii/kasa"
         }
     },
     {
